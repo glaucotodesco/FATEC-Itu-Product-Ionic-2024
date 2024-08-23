@@ -7,12 +7,12 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">products</ion-title>
+      <ion-title size="large">Produtos</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-list>
-    <ion-item *ngFor="let product of products">
+    <ion-item *ngFor="let product of products" [routerLink]="['/product-details', product.id]">
       <ion-label>{{product.name}}</ion-label>
     </ion-item>
   </ion-list>
